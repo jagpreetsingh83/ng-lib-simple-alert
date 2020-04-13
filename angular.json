@@ -27,13 +27,8 @@
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
-            "tsConfig": [
-              "projects/ng-simple-alert/tsconfig.lib.json",
-              "projects/ng-simple-alert/tsconfig.spec.json"
-            ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
+            "tsConfig": ["projects/ng-simple-alert/tsconfig.lib.json", "projects/ng-simple-alert/tsconfig.spec.json"],
+            "exclude": ["**/node_modules/**"]
           }
         }
       }
@@ -54,13 +49,8 @@
             "polyfills": "projects/ng-alert-showcase/src/polyfills.ts",
             "tsConfig": "projects/ng-alert-showcase/tsconfig.app.json",
             "aot": false,
-            "assets": [
-              "projects/ng-alert-showcase/src/favicon.ico",
-              "projects/ng-alert-showcase/src/assets"
-            ],
-            "styles": [
-              "projects/ng-alert-showcase/src/styles.css"
-            ],
+            "assets": ["projects/ng-alert-showcase/src/favicon.ico", "projects/ng-alert-showcase/src/assets"],
+            "styles": ["projects/ng-alert-showcase/src/styles.css"],
             "scripts": []
           },
           "configurations": {
@@ -114,13 +104,8 @@
             "polyfills": "projects/ng-alert-showcase/src/polyfills.ts",
             "tsConfig": "projects/ng-alert-showcase/tsconfig.spec.json",
             "karmaConfig": "projects/ng-alert-showcase/karma.conf.js",
-            "assets": [
-              "projects/ng-alert-showcase/src/favicon.ico",
-              "projects/ng-alert-showcase/src/assets"
-            ],
-            "styles": [
-              "projects/ng-alert-showcase/src/styles.css"
-            ],
+            "assets": ["projects/ng-alert-showcase/src/favicon.ico", "projects/ng-alert-showcase/src/assets"],
+            "styles": ["projects/ng-alert-showcase/src/styles.css"],
             "scripts": []
           }
         },
@@ -132,9 +117,7 @@
               "projects/ng-alert-showcase/tsconfig.spec.json",
               "projects/ng-alert-showcase/e2e/tsconfig.json"
             ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
+            "exclude": ["**/node_modules/**"]
           }
         },
         "e2e": {
@@ -150,6 +133,7 @@
           }
         }
       }
-    }},
+    }
+  },
   "defaultProject": "ng-simple-alert"
 }
