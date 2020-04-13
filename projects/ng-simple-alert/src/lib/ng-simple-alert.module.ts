@@ -6,6 +6,6 @@ import { NgSimpleAlertComponent } from './ng-simple-alert.component';
 @NgModule({
   declarations: [NgSimpleAlertComponent],
   imports: [CommonModule],
-  exports: [NgSimpleAlertComponent]
+  exports: [NgSimpleAlertComponent],
 })
 export class NgSimpleAlertModule {}

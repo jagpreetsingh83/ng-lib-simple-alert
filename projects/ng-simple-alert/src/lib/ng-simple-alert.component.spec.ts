@@ -8,9 +8,8 @@ describe('NgSimpleAlertComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ NgSimpleAlertComponent ]
-    })
-    .compileComponents();
+      declarations: [NgSimpleAlertComponent],
+    }).compileComponents();
   }));
 
   beforeEach(() => {

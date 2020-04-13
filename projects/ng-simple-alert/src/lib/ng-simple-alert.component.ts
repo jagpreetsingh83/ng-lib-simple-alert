@@ -7,17 +7,13 @@ import { NgSimpleAlertService } from './ng-simple-alert.service';
 @Component({
   selector: 'lib-ng-simple-alert',
   template: `
-    <div
-      class="alert"
-      *ngIf="alertMessage$ | async as alertMessage"
-      [ngStyle]="{ background: alertMessage.color }"
-    >
+    <div class="alert" *ngIf="alertMessage$ | async as alertMessage" [ngStyle]="{ background: alertMessage.color }">
       <span class="closebtn" (click)="closeAlert()">&times;</span>
       <strong>{{ getPrefix(alertMessage) }}!</strong>
       {{ getMessage(alertMessage) }}
     </div>
   `,
-  styles: []
+  styles: [],
 })
 export class NgSimpleAlertComponent implements OnInit {
   alertMessage$: Observable<AlertMessage | boolean>;

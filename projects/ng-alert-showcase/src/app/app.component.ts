@@ -4,7 +4,7 @@ import { NgSimpleAlertService } from 'projects/ng-simple-alert/src/public-api';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
   constructor(private alertService: NgSimpleAlertService) {}
