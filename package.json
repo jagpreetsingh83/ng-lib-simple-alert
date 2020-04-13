@@ -4,12 +4,18 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
     "format:check": "prettier --list-different 'projects/**/*.ts'",
-    "format:write": "prettier --write 'projects/**/*.ts'"
+    "format:write": "prettier --write 'projects/**/*.ts'",
+    "test:lib-coverage": "ng test ng-simple-alert --code-coverage --watch=false",
+    "report-coverage:lib": "cat ./coverage/ng-simple-alert/lcov.info | codecov -t b3c5fed9-4ed3-4d82-b9d2-909e28f07a2e",
+    "copy:readme": "copyfiles ./README.md ./projects/ng-simple-alert",
+    "build": "npm run build:lib && npm run build:demo",
+    "build:lib": "npm run copy:readme && ng build ng-simple-alert",
+    "build:demo": "ng build ng-alert-showcase --base-href='https://jagpreetsingh83.github.io/ng-simple-alert/'",
+    "publish:demo": "npx angular-cli-ghpages --dir=./dist/ng-alert-showcase"
   },
   "private": true,
   "dependencies": {
@@ -31,9 +37,11 @@
     "@angular/cli": "~8.1.0",
     "@angular/compiler-cli": "~8.1.0",
     "@angular/language-service": "~8.1.0",
+    "@babel/compat-data": "^7.8.0",
     "@types/jasmine": "~3.3.8",
     "@types/jasminewd2": "~2.0.3",
     "@types/node": "~8.9.4",
+    "codecov": "^3.6.5",
     "codelyzer": "^5.0.0",
     "husky": "^4.2.5",
     "jasmine-core": "~3.4.0",
